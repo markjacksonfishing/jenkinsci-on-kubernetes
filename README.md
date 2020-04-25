@@ -1,5 +1,6 @@
 # jenkinsci-on-kubernetes
-This repository is for the Jenkins Online Meetup featuring Jenkins on Kubernetes
+This repository is for the Jenkins Online Meetup featuring Jenkins on Kubernetes.
+The [YouTube recording can be found here](https://www.youtube.com/watch?v=h4hKSXjCqyI&t=186s)
 
 ## My Setup Notes
 1. Minikube start
@@ -39,3 +40,5 @@ This repository is for the Jenkins Online Meetup featuring Jenkins on Kubernetes
 18. Everything else is named inbound-agent
 
 19. Make sure to set the label on the job when you configure it
+
+20. Configure a new freestyle job with the inbound-agent label and a shell that just echos `Hello World`
