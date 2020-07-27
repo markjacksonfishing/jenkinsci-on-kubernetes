@@ -9,7 +9,7 @@ The [YouTube recording can be found here](https://www.youtube.com/watch?v=h4hKSX
 
 3. Kubectl -n jenkins apply -f jenkins-admin-rbac.yaml
 
-4. Kubectl -n jenkins apply -f svc jenkins-service.yaml
+4. Kubectl -n jenkins apply -f jenkins-service.yaml
 
 5. Kubectl -n jenkins apply -f jenkins-deployment.yaml
 
