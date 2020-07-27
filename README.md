@@ -5,13 +5,13 @@ The [YouTube recording can be found here](https://www.youtube.com/watch?v=h4hKSX
 ## My Setup Notes
 1. Minikube start
 
-2. Kubectl create ns jenkins
+2. kubectl create ns jenkins
 
-3. Kubectl -n jenkins apply -f jenkins-admin-rbac.yaml
+3. kubectl -n jenkins apply -f jenkins-admin-rbac.yaml
 
-4. Kubectl -n jenkins apply -f jenkins-service.yaml
+4. kubectl -n jenkins apply -f jenkins-service.yaml
 
-5. Kubectl -n jenkins apply -f jenkins-deployment.yaml
+5. kubectl -n jenkins apply -f jenkins-deployment.yaml
 
 6. minikube ip
 
