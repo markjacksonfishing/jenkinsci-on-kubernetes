@@ -6,12 +6,12 @@ FROM jenkins/jenkins:lts
 #Avoid additional packages by specifying `--no-install-recommends`
 
 # Distributed Builds plugins
-RUN /usr/local/bin/install-plugins.sh ssh-slaves && \
+RUN /usr/local/bin/install-plugins.sh ssh-agent && \
     /usr/local/bin/install-plugins.sh email-ext && \
     /usr/local/bin/install-plugins.sh mailer && \
     /usr/local/bin/install-plugins.sh slack && \
     /usr/local/bin/install-plugins.sh htmlpublisher && \
     /usr/local/bin/install-plugins.sh greenballs && \
-    /usr/local/bin/install-plugins.sh simple-theme-plugi && \
+    /usr/local/bin/install-plugins.sh simple-theme-plugin && \
     /usr/local/bin/install-plugins.sh kubernetes
     
