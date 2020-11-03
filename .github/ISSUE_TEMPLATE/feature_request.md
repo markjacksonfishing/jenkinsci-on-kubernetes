@@ -1,13 +1,19 @@
-Thank you for opening the issue. I try to be as attentive as possible but please allow for 24 to 48 hours for this to be triaged.
+---
+name: "🚀 Feature Request"
+about: "I have a suggestion (and may want to implement it!)"
+
+---
+
+## Feature Request
 
 **Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+A clear and concise description of what the problem is. eg. I have an issue when [...]
 
 **Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+A detailed description of your proposed solution. Include:
+- How the feature would work/behave
+- Any potential drawbacks
+- Maybe a screenshot, design, or example code
 
 **Describe alternatives you've considered**
 A clear and concise description of any alternative solutions or features you've considered.
-
-**Additional context**
-Add any other context or screenshots about the feature request here.
