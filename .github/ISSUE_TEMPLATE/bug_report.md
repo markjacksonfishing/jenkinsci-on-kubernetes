@@ -26,11 +26,11 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Environment (please complete the following information):**
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
- - OS: [e.g. ubuntu, arms etc]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+- Browser [e.g. chrome, safari]
+- Version [e.g. 22]
+- OS: [e.g. ubuntu, arms etc]
+- Browser [e.g. stock browser, safari]
+- Version [e.g. 22]
 
 **Additional context**
 Add any other context about the problem here.
