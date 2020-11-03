@@ -33,7 +33,7 @@ The [YouTube recording can be found here](https://www.youtube.com/watch?v=h4hKSX
 
 15. Add jenkins url. This is the jenkins pod IP http://<pod IP>:8080
 
-16. Explained the work of renaming on as described [here](https://hub.docker.com/r/jenkins/jnlp-slave/)
+16. Explained the work of renaming 
 
 17. You will use jenkins/inbound-agent
 
