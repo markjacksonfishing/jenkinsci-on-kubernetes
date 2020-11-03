@@ -15,24 +15,9 @@ In general, we close any issues that are
 
 We have a small community of people that manages issues, and we want to ensure that the issues that remain open are high quality (so we actually get around to implementing them!).
 
-### I have a question!
-
-The stellar-core issues repository is meant for reporting bugs and feature requests related to stellar-core's implementation.
-
-If you have a question, we would recommend that you take a look at Stellar's [developer portal][1], where you'll find comprehensive documentation related to Stellar.
-
-If you can't find an answer to your question you can:
-* submit a question to [Stellar's Stack Exchange][2].
-* or ask one of [Stellar's communities][3].
-
-[1]: https://www.stellar.org/developers/
-[2]: https://stellar.stackexchange.com/
-[3]: https://www.stellar.org/community/#communities
-
 ### I'm fairly certain it's a bug.
 
 * Please check existing and closed issues in Github! You may have to remove the `is:open` filter.
-* Check the [releases](https://github.com/stellar/stellar-core/releases) page to see if your issue has been fixed in a later release.
 * When possible, re-open an old issue if there's been a regression. Be sure to include additional
   details on what was supposed to be working.
 
@@ -51,8 +36,7 @@ If you can't find an answer to your question you can:
 
 ## Your Environment and Setup
 
-### stellar-core Version
-* If using a standard release, please add the version returned by `./stellar-core --version`
+### Version
 * If working off of master, please add the git hash of the version you're running using `git rev-parse HEAD`
 
 ### Environment
