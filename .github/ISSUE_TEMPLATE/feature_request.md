@@ -1,12 +1,3 @@
----
-name: Feature request
-about: Suggest an idea for this project
-title: I would love to see [Feature]
-labels: To Be Triaged
-assignees: markyjackson-taulia
-
----
-
 Thank you for opening the issue. I try to be as attentive as possible but please allow for 24 to 48 hours for this to be triaged.
 
 **Is your feature request related to a problem? Please describe.**
