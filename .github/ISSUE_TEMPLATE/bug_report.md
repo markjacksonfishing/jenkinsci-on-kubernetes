@@ -1,7 +1,7 @@
 ---
 name: Bug Report
 about: Create a report to help us improve stellar-core
-title: "[Short Description] (Version: [stellar-core version])"
+title: Short Description
 labels: bug
 assignees: ''
 
