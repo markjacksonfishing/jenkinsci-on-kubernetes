@@ -1,12 +1,3 @@
----
-* name: Bug Report
-* about: Create a report to help us improve stellar-core
-* title: Short Description
-* labels: bug
-* assignees: ''
-
----
-
 ## Read before creating an issue
 
 In general, we close any issues that are
