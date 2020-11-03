@@ -10,7 +10,7 @@ about: "I have a suggestion (and may want to implement it!)"
 A clear and concise description of what the problem is. eg. I have an issue when [...]
 
 **Describe the solution you'd like**
-A detailed description of your proposed solution. Include:
+A detailed description of your proposed solution.
 - How the feature would work/behave
 - Any potential drawbacks
 - Maybe a screenshot, design, or example code
