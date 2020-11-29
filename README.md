@@ -1,21 +1,23 @@
 # jenkinsci-on-kubernetes
+
 This repository is for the Jenkins Online Meetup featuring Jenkins on Kubernetes.
 The [YouTube recording can be found here](https://www.youtube.com/watch?v=h4hKSXjCqyI&t=186s)
 
 ## My Setup Notes
-1. Minikube start
 
-2. kubectl create ns jenkins
+1. `minikube start`
 
-3. kubectl -n jenkins apply -f jenkins-admin-rbac.yaml
+2. `kubectl create ns jenkins`
 
-4. kubectl -n jenkins apply -f jenkins-service.yaml
+3. `kubectl -n jenkins apply -f jenkins-admin-rbac.yaml`
 
-5. kubectl -n jenkins apply -f jenkins-deployment.yaml
+4. `kubectl -n jenkins apply -f jenkins-service.yaml`
 
-6. minikube ip
+5. `kubectl -n jenkins apply -f jenkins-deployment.yaml`
 
-7. Kubectl -n jenkins get svc for nodeport
+6. `minikube ip`
+
+7. `kubectl -n jenkins get svc` for nodeport
 
 8. Use minikube ip and :nodeport to access Jenkins UI
 
@@ -25,7 +27,7 @@ The [YouTube recording can be found here](https://www.youtube.com/watch?v=h4hKSX
 
 11. Add new cloud
 
-12. Run kubectl cluster-info | grep master to get control plane ip
+12. Run `kubectl cluster-info | grep master` to get control plane ip
 
 13. Add that in the Kubernetes field 
 
@@ -35,7 +37,7 @@ The [YouTube recording can be found here](https://www.youtube.com/watch?v=h4hKSX
 
 16. Explained the work of renaming 
 
-17. You will use jenkins/inbound-agent
+17. You will use `jenkins/inbound-agent`
 
 18. Everything else is named inbound-agent
 
