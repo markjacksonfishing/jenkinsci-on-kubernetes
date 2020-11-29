@@ -5,7 +5,7 @@ The [YouTube recording can be found here](https://www.youtube.com/watch?v=h4hKSX
 
 ## My Setup Notes
 
-1. Minikube start
+1. `minikube start`
 
 2. `kubectl create ns jenkins`
 
