@@ -15,7 +15,7 @@ spec:
       serviceAccountName: jenkins
       containers:
         - name: jenkins
-          image: jequals5/jenkins-on-kubernetes:v4.5.3
+          image: docker.pkg.github.com/markyjackson-taulia/jenkinsci-on-kubernetes/jenkins-on-kubernetes:v4.5.4
           env:
             - name: JAVA_OPTS
               value: -Djenkins.install.runSetupWizard=false
