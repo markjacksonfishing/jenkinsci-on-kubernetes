@@ -16,9 +16,10 @@ spec:
       containers:
         - name: jenkins
           image: jequals5/jenkins-on-kubernetes:v7.6
+          imagePullPolicy: IfNotPresent
           env:
             - name: JAVA_OPTS
-              value: -Djenkins.install.runSetupWizard=false
+              value: "-Dhudson.footerURL=http://jenkins.example.com -Djenkins.install.runSetupWizard=false"
           ports:
             - name: http-port
               containerPort: 8080
@@ -27,6 +28,8 @@ spec:
           volumeMounts:
             - name: jenkins-home
               mountPath: /var/jenkins_home
+              readOnly: false
       volumes:
         - name: jenkins-home
-          emptyDir: {}
+          persistentVolumeClaim:
+            claimName: jenkins-pvc
