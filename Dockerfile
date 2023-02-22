@@ -1,17 +1,51 @@
 FROM jenkins/jenkins:lts
 
-# For the sake of this demo I have cut corners. If I were to do this nicer, I would address the below items
-# Pin versions in apt get install. Instead of `apt-get install <package>` use `apt-get install <package>=<version>`
-# Delete the apt-get lists after installing something
-# Avoid additional packages by specifying `--no-install-recommends`
+USER root
+
+# Install required packages and update package lists
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        apt-transport-https \
+        ca-certificates \
+        curl \
+        gnupg2 \
+        software-properties-common \
+        build-essential \
+        git \
+        ssh \
+        zip \
+        unzip \
+        jq \
+        openssh-client && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install Docker CLI
+RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
+    add-apt-repository \
+        "deb [arch=amd64] https://download.docker.com/linux/debian \
+        $(lsb_release -cs) \
+        stable" && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends \
+        docker-ce-cli && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install kubectl
+RUN curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && \
+    echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | tee -a /etc/apt/sources.list.d/kubernetes.list && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends \
+        kubectl && \
+    rm -rf /var/lib/apt/lists/*
 
 # Distributed Builds plugins
-RUN /usr/local/bin/install-plugins.sh ssh-agent && \
-    /usr/local/bin/install-plugins.sh email-ext && \
-    /usr/local/bin/install-plugins.sh mailer && \
-    /usr/local/bin/install-plugins.sh slack && \
-    /usr/local/bin/install-plugins.sh htmlpublisher && \
-    /usr/local/bin/install-plugins.sh greenballs && \
-    /usr/local/bin/install-plugins.sh simple-theme-plugin && \
-    /usr/local/bin/install-plugins.sh kubernetes
-    
+RUN /usr/local/bin/install-plugins.sh ssh-agent \
+    email-ext \
+    mailer \
+    slack \
+    htmlpublisher \
+    greenballs \
+    simple-theme-plugin \
+    kubernetes
+
+USER jenkins
