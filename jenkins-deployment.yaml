@@ -15,7 +15,7 @@ spec:
       serviceAccountName: jenkins
       containers:
         - name: jenkins
-          image: jequals5/jenkins-on-kubernetes:v9.2
+          image: jequals5/jenkins-on-kubernetes:v9.3
           imagePullPolicy: IfNotPresent
           env:
             - name: JAVA_OPTS
