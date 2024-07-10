@@ -17,10 +17,8 @@ RUN apt-get update && \
         unzip \
         jq \
         openssh-client && \
-    rm -rf /var/lib/apt/lists/*
-
-# Install Docker CLI
-RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
+    # Install Docker CLI
+    curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
     add-apt-repository \
         "deb [arch=amd64] https://download.docker.com/linux/debian \
         $(lsb_release -cs) \
@@ -28,10 +26,8 @@ RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
     apt-get update && \
     apt-get install -y --no-install-recommends \
         docker-ce-cli && \
-    rm -rf /var/lib/apt/lists/*
-
-# Install kubectl
-RUN curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && \
+    # Install kubectl
+    curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && \
     echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | tee -a /etc/apt/sources.list.d/kubernetes.list && \
     apt-get update && \
     apt-get install -y --no-install-recommends \

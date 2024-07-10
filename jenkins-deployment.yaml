@@ -28,7 +28,6 @@ spec:
           volumeMounts:
             - name: jenkins-home
               mountPath: /var/jenkins_home
-              readOnly: false
       volumes:
         - name: jenkins-home
           persistentVolumeClaim:
