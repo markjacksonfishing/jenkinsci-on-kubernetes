@@ -14,21 +14,21 @@ spec:
     spec:
       serviceAccountName: jenkins
       containers:
-        - name: jenkins
-          image: jequals5/jenkins-on-kubernetes:v9.7
-          imagePullPolicy: IfNotPresent
-          env:
-            - name: JAVA_OPTS
-              value: "-Dhudson.footerURL=http://jenkins.example.com -Djenkins.install.runSetupWizard=false"
-          ports:
-            - name: http-port
-              containerPort: 8080
-            - name: jnlp-port
-              containerPort: 50000
-          volumeMounts:
-            - name: jenkins-home
-              mountPath: /var/jenkins_home
-      volumes:
+      - name: jenkins
+        image: anuclei/jenkins-on-kubernetes:v2.0
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: JAVA_OPTS
+          value: "-Dhudson.footerURL=http://jenkins.example.com -Djenkins.install.runSetupWizard=false"
+        ports:
+        - name: http-port
+          containerPort: 8080
+        - name: jnlp-port
+          containerPort: 50000
+        volumeMounts:
         - name: jenkins-home
-          persistentVolumeClaim:
-            claimName: jenkins-pvc
+          mountPath: /var/jenkins_home
+      volumes:
+      - name: jenkins-home
+        persistentVolumeClaim:
+          claimName: jenkins-pvc
