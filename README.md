@@ -1,7 +1,3 @@
-Here’s the updated `README.md` with steps for using the `getstarted.sh` script as well as the manual steps.
-
----
-
 # Welcome to Jenkins on Kubernetes!
 
 This guide will help you set up Jenkins on Kubernetes using Minikube in a few simple steps. Follow the instructions below to get started.
